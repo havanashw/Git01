@@ -1,0 +1,76 @@
+---
+title: "生成随机数"
+author: "Shi Hongwei"
+date: "2020年4月6日"
+output:
+  html_document:
+    df_print: kable
+    fig_caption: yes
+    highlight: tango
+    keep_md: yes
+    theme: journal
+    toc: yes
+---
+
+
+```{r setup, include=FALSE}
+rm(list = ls())
+knitr::opts_chunk$set(echo = TRUE)
+options(warn = -1) # 关闭警告
+library(knitr)
+library(papeR)
+```
+
+## 服从正态分布的随机数
+```rnorm(n, mean = 0, sd = 1)```
+
+### 标准正态分布
+```{r}
+rnorm(10)
+```
+
+### 一般正态分布
+```{r}
+rnorm(10, mean = 1, sd = 4)
+```
+
+此外，还有其他三个函数，dnorm，pnorm，qnorm。在如上两种基本用法中只是名字有所不同，效果是一样的。当然这三个函数还有自己相应的特殊用法，可以通过```help(dnorm)```进行查询。
+
+## 服从均匀分布的随机数
+```runif(n, min = 0, max = 1)```
+
+### 生成其他区间上的随机数
+```{r}
+runif(10, min = 5, max = 7)
+```
+
+同样的，runif也有其他三个函数，dunif，punif，qunif。
+
+## 其他操作
+
+| **命令** | **分布** |
+|---|---|
+| rexp | 指数分布 |
+| rf | F分布 |
+| rgamma | Gamma分布 |
+| rgeom | 几何分布 |
+| rhyper | 超几何分布 |
+| rlnorm | 对数正态分布 |
+| rlogis | Logistic分布 |
+| rmultinom | 多项分布 |
+| rnbinom | 负二项分布 |
+| rpois | 泊松分布 |
+| rt | t分布 |
+| rchisq | 卡方分布 |
+| rweibull | Weibull分布 |
+| rwilcox | Distribution of the Wilcoxon Rank Sum Statistic |
+| rsignrank | Distribution of the Wilcoxon Signed Rank Statistic |
+
+
+
+
+
+
+
+
+
